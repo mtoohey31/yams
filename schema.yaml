@@ -101,6 +101,30 @@ properties:
                         type: number
                         exclusiveMinimum: 0
                       unit:
-                        type: string
+                        oneOf:
+                        - type: string
+                        - type: object
+                          title: singular/plural unit
+                          additionalProperties: false
+                          required:
+                            - singular
+                            - plural
+                          properties:
+                            singular:
+                              type: string
+                            plural:
+                              type: string
                       name:
-                        type: string
+                        oneOf:
+                        - type: string
+                        - type: object
+                          title: singular/plural name
+                          additionalProperties: false
+                          required:
+                            - singular
+                            - plural
+                          properties:
+                            singular:
+                              type: string
+                            plural:
+                              type: string
