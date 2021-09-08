@@ -128,3 +128,5 @@ properties:
                               type: string
                             plural:
                               type: string
+                      note:
+                        type: string
