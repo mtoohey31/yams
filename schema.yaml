@@ -31,6 +31,61 @@ properties:
               pattern: "[^]*[.!?]"
             optional:
               type: boolean
+            time:
+              oneOf:
+                - type: number
+                  title: minutes
+                  exclusiveMinimum: 0
+                - type: object
+                  title: time
+                  additionalProperties: false
+                  required:
+                    - amount
+                  properties:
+                    amount:
+                      type: number
+                      exclusiveMinimum: 0
+                    unit:
+                      type: string
+                - type: object
+                  title: time range
+                  additionalProperties: false
+                  required:
+                    - min
+                    - max
+                  properties:
+                    min:
+                      oneOf:
+                        - type: number
+                          title: minutes
+                          exclusiveMinimum: 0
+                        - type: object
+                          title: time
+                          additionalProperties: false
+                          required:
+                            - amount
+                          properties:
+                            amount:
+                              type: number
+                              exclusiveMinimum: 0
+                            unit:
+                              type: string
+                    max:
+                      oneOf:
+                        - type: number
+                          title: minutes
+                          exclusiveMinimum: 0
+                        - type: object
+                          title: time
+                          additionalProperties: false
+                          required:
+                            - amount
+                          properties:
+                            amount:
+                              type: number
+                              exclusiveMinimum: 0
+                            unit:
+                              type: string
             ingredients:
               type: array
               items:
