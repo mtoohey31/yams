@@ -25,19 +25,23 @@ properties:
           properties:
             text:
               type: string
+            optional:
+              type: boolean
             ingredients:
               type: array
               items:
-                type: object
-                title: ingredient
-                additionalProperties: false
-                required:
-                  - name
-                properties:
-                  count:
-                    type: number
-                    exclusiveMinimum: 0
-                  unit:
-                    type
-                  name:
-                    type: string
+                oneOf:
+                  - type: string
+                  - type: object
+                    title: ingredient
+                    additionalProperties: false
+                    required:
+                      - name
+                    properties:
+                      count:
+                        type: number
+                        exclusiveMinimum: 0
+                      unit:
+                        type: string
+                      name:
+                        type: string
