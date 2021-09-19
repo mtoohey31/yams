@@ -10,8 +10,21 @@ properties:
   name:
     type: string
   wait_time:
-    type: number
-    exclusiveMinimum: 0
+    oneOf:
+      - type: number
+        title: minutes
+        exclusiveMinimum: 0
+      - type: object
+        title: time
+        additionalProperties: false
+        required:
+          - amount
+        properties:
+          amount:
+            type: number
+            exclusiveMinimum: 0
+          unit:
+            type: string
   steps:
     type: array
     items:
