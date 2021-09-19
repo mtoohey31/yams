@@ -5,6 +5,7 @@ type: object
 additionalProperties: false
 required:
   - name
+  - meals
   - steps
 properties:
   name:
@@ -25,6 +26,18 @@ properties:
             exclusiveMinimum: 0
           unit:
             type: string
+  meals:
+    type: array
+    items:
+      type: string
+      enum:
+        - snack
+        - breakfast
+        - lunch
+        - dinner
+  servings:
+    type: integer
+    minimum: 1
   steps:
     type: array
     items:
