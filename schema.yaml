@@ -44,7 +44,7 @@ properties:
       oneOf:
         - type: string
           title: sentences
-          pattern: "[^]*[.!?]"
+          pattern: "[^]*[.!?\\)]$"
         - type: object
           title: step
           additionalProperties: false
@@ -54,7 +54,7 @@ properties:
             text:
               type: string
               title: sentences
-              pattern: "[^]*[.!?]"
+              pattern: "[^]*[.!?\\)]$"
             optional:
               type: boolean
             time:
