@@ -123,7 +123,7 @@ properties:
                     required:
                       - name
                     properties:
-                      count:
+                      amount:
                         type: number
                         exclusiveMinimum: 0
                       unit:
