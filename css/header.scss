@@ -1,0 +1,41 @@
+// NOTE: Theme beyond this point taken from: https://github.com/illright/attractions/tree/main/attractions
+
+@use 'sass:color';
+@use 'theme' as vars;
+
+$side-margin: 1em;
+
+header {
+  align-items: center;
+  border-bottom: 1px solid color.adjust(vars.$main, $alpha: -0.75);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  padding-top: 0.6em;
+
+  .logo,
+  .clickables {
+    align-items: center;
+    display: flex;
+  }
+
+  .logo {
+    // margin-left: $side-margin + 0.7em;
+    text-decoration: none;
+
+    span {
+      color: #000;
+      font-size: 1.25em;
+      font-weight: vars.$bold-font-weight;
+      margin-left: 0.7em;
+    }
+  }
+
+  .clickables {
+    margin-right: $side-margin;
+
+    :global {
+      margin-top: -2px;
+    }
+  }
+}
