@@ -141,6 +141,7 @@
   <div style="min-width: 20em;">
     <h2>Steps</h2>
     <ol>
+      <!-- TODO: Add builtin timer with start, pause, reset, add time, and alarm on finish -->
       {#each recipe.steps as step}
         <li>
           {#if typeof step === "string"}
