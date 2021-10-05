@@ -1,4 +1,5 @@
 # yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+# TODO: support different methods for a given step, or the whole process
 $id: "https://raw.githubusercontent.com/mtoohey31/yams/master/schema.yaml"
 title: recipe
 type: object
@@ -32,6 +33,7 @@ properties:
             type: string
   meals:
     type: array
+    minItems: 1
     items:
       type: string
       enum:
@@ -44,6 +46,7 @@ properties:
     minimum: 1
   steps:
     type: array
+    minItems: 1
     items:
       oneOf:
         - type: string
