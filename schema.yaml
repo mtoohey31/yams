@@ -1,5 +1,8 @@
 # yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
 # TODO: support different methods for a given step, or the whole process
+# TODO: use some string templating system to place ingredients and timing into step text
+# TODO: split things into separate objects so that things like times can be
+# re-used instead of having to copy-paste them
 $id: "https://raw.githubusercontent.com/mtoohey31/yams/master/schema.yaml"
 title: recipe
 type: object
