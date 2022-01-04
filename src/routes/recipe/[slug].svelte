@@ -21,12 +21,8 @@
 </script>
 
 <script lang="ts">
-  import { FormField, TextField } from "attractions";
-  import type {
-    Recipe as SchemaType,
-    Ingredient,
-    Step,
-  } from "$lib/schema-type";
+  import { TextField } from "attractions";
+  import type { Recipe as SchemaType, Ingredient } from "$lib/schema-type";
 
   import MealChips from "$lib/MealChips.svelte";
 
@@ -34,8 +30,6 @@
 
   const defaultServings = recipe.servings ? recipe.servings : 1;
   let servings = defaultServings;
-  let servingsText: string = String(servings);
-  let servingsErrorText: string;
 
   // @ts-ignore
   let ingredients = recipe.steps.reduce((ingredientsSoFar, curr) => {
