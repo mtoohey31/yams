@@ -1,12 +1,10 @@
 <script lang="ts">
-  import { Card, Chip } from "attractions";
+  import { Card } from "attractions";
   import MealChips from "$lib/MealChips.svelte";
   import type { Recipe as SchemaType } from "$lib/schema-type";
 
   export let route: string;
   export let recipe: SchemaType;
-
-  const mealsOrder = ["snack", "breakfast", "lunch", "dinner"];
 </script>
 
 <div style="margin-top: 1em;">
